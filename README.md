@@ -1,6 +1,14 @@
-# AngularChartjs
+# AngularCharts
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+## Using Chartjs with Angular 
+  `npm install chart.js`
+  `npm install ng2-charts`
+  
+
+## Using Vega with Angular 
+  `npm install vega`
+  `npm install @types/vega`
+  
 
 ## Development server
 
