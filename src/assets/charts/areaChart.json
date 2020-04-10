@@ -1,0 +1,81 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "width": 720,
+    "height": 400,
+    "padding": 5,
+  
+    "data": [
+      {
+        "name": "sp500",
+        "url":  "assets/data/areaChart.csv",
+        "format": {"type": "csv", "parse": {"price": "number", "date": "date"}}
+      }
+    ],
+  
+    "signals": [
+      {
+        "name": "detailDomain"
+      }
+    ],
+  
+    "marks": [
+      {
+        "type": "group",
+        "name": "detail",
+        "encode": {
+          "enter": {
+            "height": {"value": 390},
+            "width": {"value": 720}
+          }
+        },
+        "scales": [
+          {
+            "name": "xDetail",
+            "type": "time",
+            "range": "width",
+            "domain": {"data": "sp500", "field": "date"},
+            "domainRaw": {"signal": "detailDomain"}
+          },
+          {
+            "name": "yDetail",
+            "type": "linear",
+            "range": [390, 0],
+            "domain": {"data": "sp500", "field": "price"},
+            "nice": true, "zero": true
+          }
+        ],
+        "axes": [
+          {"orient": "bottom", "scale": "xDetail"},
+          {"orient": "left", "scale": "yDetail"}
+        ],
+        "marks": [
+          {
+            "type": "group",
+            "encode": {
+              "enter": {
+                "height": {"field": {"group": "height"}},
+                "width": {"field": {"group": "width"}},
+                "clip": {"value": true}
+              }
+            },
+            "marks": [
+              {
+                "type": "area",
+                "from": {"data": "sp500"},
+                "encode": {
+                  "update": {
+         
+                    "x": {"scale": "xDetail", "field": "date"},
+                    "y": {"scale": "yDetail", "field": "price"},
+                    "y2": {"scale": "yDetail", "value": 0},
+                    "fill": {"value": "steelblue"}
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+      
+    ]
+  }
