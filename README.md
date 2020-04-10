@@ -3,13 +3,12 @@
 ## Using Chartjs with Angular 
 Install Chartjs and ng2-charts library :  
   `npm install chart.js`  
-  
   `npm install ng2-charts`
   
 
 ## Using Vega with Angular 
-Install Vega and typings for the library: 
-  `npm install vega`
+Install Vega and typings for the library:   
+  `npm install vega`  
   `npm install @types/vega`
   
 
