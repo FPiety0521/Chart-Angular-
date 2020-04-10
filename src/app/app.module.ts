@@ -9,13 +9,15 @@ import { ChartsModule } from 'ng2-charts';
 import { MyBarChartComponent } from './my-bar-chart/my-bar-chart.component';
 import { VegaChartComponent } from './vega-chart/vega-chart.component';
 import { VegaChartsComponent } from './vega-charts/vega-charts.component';
+import { AmChartChartsComponent } from './am-chart-charts/am-chart-charts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyBarChartComponent,
     VegaChartComponent,
-    VegaChartsComponent
+    VegaChartsComponent,
+    AmChartChartsComponent
   ],
   imports: [
     BrowserModule,
