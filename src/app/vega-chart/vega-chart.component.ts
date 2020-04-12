@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit , ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { range, random } from 'lodash';
 
 @Component({
   selector: 'app-vega-chart',

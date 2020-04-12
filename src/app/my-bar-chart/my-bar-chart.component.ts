@@ -18,6 +18,16 @@ export class MyBarChartComponent implements OnInit {
     {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
   
   ];
+
+
+
+   public radarChartLabels = ['Q1', 'Q2', 'Q3', 'Q4'];
+  public radarChartData = [
+    {data: [120, 130, 180, 70], label: '2017'},
+    {data: [90, 150, 200, 45], label: '2018'}
+  ];
+  public radarChartType = 'radar'; 
+  
   ngOnInit() {
   }
 }
